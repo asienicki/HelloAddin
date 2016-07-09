@@ -43,8 +43,10 @@
             // 
             // weatherTab
             // 
+            this.weatherTab.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office;
+            this.weatherTab.ControlId.OfficeId = "TabAppointment";
             this.weatherTab.Groups.Add(this.group1);
-            this.weatherTab.Label = "Pogoda";
+            this.weatherTab.Label = "TabAppointment";
             this.weatherTab.Name = "weatherTab";
             // 
             // group1
