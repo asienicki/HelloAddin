@@ -61,14 +61,13 @@
             this.button1.Label = "Sprawdź pogodę";
             this.button1.Name = "button1";
             this.button1.ShowImage = true;
-            this.button1.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnCheckWeather);
+            this.button1.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.BtnCheckWeather);
             // 
             // SunTab
             // 
             this.Name = "SunTab";
             this.RibbonType = "Microsoft.Outlook.Appointment, Microsoft.Outlook.MeetingRequest.Send";
             this.Tabs.Add(this.weatherTab);
-            this.Load += new Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler(this.SunTab_Load);
             this.weatherTab.ResumeLayout(false);
             this.weatherTab.PerformLayout();
             this.group1.ResumeLayout(false);

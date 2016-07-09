@@ -1,18 +1,24 @@
-﻿using System.Windows.Forms;
-using Microsoft.Office.Tools.Ribbon;
+﻿using Microsoft.Office.Tools.Ribbon;
 
 namespace HelloAddin
 {
-    public partial class SunTab
+public partial class SunTab
+{
+    private void BtnCheckWeather(object sender, RibbonControlEventArgs e)
     {
-        private void SunTab_Load(object sender, RibbonUIEventArgs e)
-        {
-
-        }
-
-        private void btnCheckWeather(object sender, RibbonControlEventArgs e)
-        {
-            MessageBox.Show("Jutro znowu gorąco! Kup klimę albo będziesz zdychał :)");
-        }
+        ShowForm();
     }
+
+    private HelloForm _form1;
+
+    private void ShowForm()
+    {
+        if (_form1 == null)
+        {
+            _form1 = new HelloForm();
+        }
+
+        _form1.ShowDialog();
+    }
+}
 }
