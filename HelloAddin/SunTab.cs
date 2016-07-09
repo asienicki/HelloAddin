@@ -11,14 +11,14 @@ public partial class SunTab
 
     private HelloForm _form1;
 
-    private void ShowForm()
+private void ShowForm()
+{
+    if (_form1 == null)
     {
-        if (_form1 == null)
-        {
-            _form1 = new HelloForm();
-        }
-
-        _form1.ShowDialog();
+        _form1 = new HelloForm(Globals.ThisAddIn.AppointmentItem);
     }
+
+    _form1.ShowDialog();
+}
 }
 }

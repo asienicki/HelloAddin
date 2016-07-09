@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Windows.Forms;
+using Microsoft.Office.Interop.Outlook;
 
 namespace HelloAddin
 {
     public partial class HelloForm : Form
     {
-        public HelloForm()
+        private readonly AppointmentItem _appointmentItem;
+
+        public HelloForm(AppointmentItem appointmentItem)
         {
+            _appointmentItem = appointmentItem;
             InitializeComponent();
         }
 
